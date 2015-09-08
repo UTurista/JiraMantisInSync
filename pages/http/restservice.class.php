@@ -46,11 +46,9 @@ class RestService
     $bugID = $issue->key;
     
     $t_bug_data = new BugData;
-    //FIXE:
-    //Jira does not have/report project ID so we need a config here
-    $t_bug_data->project_id = 1;
-    
    
+    $t_bug_data->project_id = plugin_config_get('project_id');
+    
         
     $t_bug_data->summary = $this->getValue($issue->fields, 'summary', '');
     $t_bug_data->description = $this->getValue($issue->fields, 'description', '');

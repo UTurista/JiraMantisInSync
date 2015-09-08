@@ -31,6 +31,11 @@ class JiraMantisInSyncPlugin extends MantisPlugin{
   }
 
 
+  function config() {
+        return array(
+            'project_id' => 2
+        );
+  }
   
   function onReportBug($p_event, $bugData){
 
