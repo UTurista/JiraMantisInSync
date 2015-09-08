@@ -33,6 +33,8 @@ class JiraMantisInSyncPlugin extends MantisPlugin{
 
   function config() {
         return array(
+            'token' => '',
+            'installed' => false,
             'project_id' => 2
         );
   }
